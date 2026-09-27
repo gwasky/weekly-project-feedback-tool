@@ -5,6 +5,8 @@ description = "Collect weekly project updates, draft an AI summary, and publish 
 requires-python = ">=3.13"
 dependencies = [
     "django>=5.2,<5.3",
+    "django-environ>=0.14.0",
+    "psycopg[binary]>=3.3.6",
 ]
 
 [dependency-groups]
@@ -15,7 +17,7 @@ dev = [
 ]
 
 [tool.pytest.ini_options]
-DJANGO_SETTINGS_MODULE = "config.settings"
+DJANGO_SETTINGS_MODULE = "config.settings.dev"
 testpaths = ["tests"]
 
 [tool.ruff]
