@@ -20,7 +20,7 @@ The product is mostly forms, records and permissions, plus one scheduled AI job.
 | Web framework | Django 5.2 LTS | Custom `User` model from day one |
 | Database | PostgreSQL 17 | Local via `docker compose` |
 | Frontend | Django templates + HTMX 2 (+ Alpine.js where needed) | No JS build step |
-| Styling | Tailwind via the standalone CLI (or plain CSS) | To confirm |
+| Styling | Plain CSS with design tokens | See `design-system.md` |
 | Background jobs | Procrastinate (Postgres-backed queue with periodic tasks) | Avoids running Redis |
 | AI | Anthropic Python SDK, `claude-sonnet-5` | Structured output with source citations |
 | Auth | Company SSO over OIDC (`mozilla-django-oidc`) | Username/password login in dev only |
@@ -248,6 +248,6 @@ ai-native/
 
 - Reporting deadline day, time and timezone.
 - SSO provider (Okta, Entra ID, Google Workspace, …).
-- Tailwind or plain CSS.
+- ~~Tailwind or plain CSS~~ — plain CSS (see `design-system.md`).
 - Hosting target (a cloud container service, or inside the company network).
 - Multi-project membership (assumed **yes**, §2).
